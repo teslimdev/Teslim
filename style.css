@@ -356,6 +356,9 @@ form textarea {
   font-size: 18px;
   border-radius: 6px;
 }
+form input:valid{
+  content: 'good';
+}
 .copyright {
   width: 100%;
   text-align: center;
@@ -450,13 +453,34 @@ nav .bar2 {
     max-width: 100%;
     margin: 0 25px;
   }
-  .tab-links{
+  .tab-links {
     font-size: 16px;
-   margin-top: 20px;
+    margin-top: 20px;
   }
-    .about-col-2 p {
-      padding-top: 10px;
+  .about-col-2 p {
+    padding-top: 10px;
+  }
+  #services {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+    #portfolio{
+      max-width: 100%;
+        margin: 0 25px;
     }
+    .contact-left,.contact-right{
+       flex-basis: 100% ;
+    }
+        .btn {
+       
+          margin: 30px auto;
+          padding: 14px 30px;
+         
+        }
+                .services-list div i {
+                  font-size: 30px;
+                  margin-bottom: 20px;
+                }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -505,9 +529,9 @@ nav .bar2 {
     color: goldenrod;
     text-transform: capitalize;
   }
-    .subtitle {
-      font-size: 50px;
-    }
+  .subtitle {
+    font-size: 50px;
+  }
   .nav-head {
     margin: 0 20px;
   }
@@ -532,20 +556,35 @@ nav .bar2 {
 
   .about-col-2 {
     font-size: 14px;
-  
   }
-    .about-col-2 p{
-      padding-top: 10px;
-    }
-    .row {
+  .about-col-2 p {
+    padding-top: 10px;
+  }
+  .row {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  #services {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+    #portfolio {
       max-width: 100%;
       margin: 0 25px;
     }
-  
-    .tab-links {
-      font-size: 16px;
-      margin-top: 20px;
-    }
+         .contact-left,
+         .contact-right {
+           flex-basis: 100%;
+         }
+                 .services-list div i {
+                   font-size: 30px;
+                   margin-bottom: 20px;
+                 }
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1439px) {
@@ -556,4 +595,27 @@ nav .bar2 {
   .nav-head {
     margin: 0 20px;
   }
+  #services {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+  .about-col-1 {
+    flex-basis: 30%;
+  }
+  .about-col-2 {
+    flex-basis: 50%;
+  }
+  .row {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+    #portfolio {
+      max-width: 100%;
+      margin: 0 25px;
+    } 
+        .services-list div i {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+    
 }
