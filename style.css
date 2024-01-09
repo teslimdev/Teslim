@@ -8,7 +8,7 @@ body {
   background: #080808;
   color: #fff;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 #header {
@@ -35,7 +35,7 @@ html{
   z-index: 1;
 }
 nav {
-  /* background-color: #080808; */
+  background-color: transparent;
   width: 100%;
   position: fixed;
   padding: 10px 0;
@@ -51,14 +51,21 @@ nav {
 .nav-header {
   border-bottom: 1px solid white;
 }
+.nav-scroll {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), white);
+  /* background: linear-gradient(rgba(255, 255, 255, 0.6), black); */
+}
+.no-border {
+  border-bottom: none;
+}
 nav h1 {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   text-transform: capitalize;
   margin: 10px 0;
 }
-nav h1 a{
- text-decoration: none;
- color: goldenrod;
+nav h1 a {
+  text-decoration: none;
+  color: goldenrod;
 }
 nav h1 span {
   color: white;
@@ -102,7 +109,7 @@ nav ul li a:hover::after {
   color: goldenrod;
 }
 #about {
-  padding: 80px 0;
+  padding: 50px 0;
   color: white;
 }
 .about-col-1 img {
@@ -169,7 +176,7 @@ nav ul li a:hover::after {
   display: block;
 }
 #services {
-  padding: 30px 0;
+  padding: 10px 0;
   max-width: 1200px;
   margin: auto;
 }
@@ -362,8 +369,8 @@ form textarea {
   font-size: 18px;
   border-radius: 6px;
 }
-form input:valid{
-  content: 'good';
+form input:valid {
+  content: "good";
 }
 .copyright {
   width: 100%;
@@ -470,23 +477,22 @@ nav .bar2 {
     max-width: 100%;
     margin: 0 25px;
   }
-    #portfolio{
-      max-width: 100%;
-        margin: 0 25px;
-    }
-    .contact-left,.contact-right{
-       flex-basis: 100% ;
-    }
-        .btn {
-       
-          margin: 30px auto;
-          padding: 14px 30px;
-         
-        }
-                .services-list div i {
-                  font-size: 30px;
-                  margin-bottom: 20px;
-                }
+  #portfolio {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .btn {
+    margin: 30px auto;
+    padding: 14px 30px;
+  }
+  .services-list div i {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -579,18 +585,18 @@ nav .bar2 {
     max-width: 100%;
     margin: 0 25px;
   }
-    #portfolio {
-      max-width: 100%;
-      margin: 0 25px;
-    }
-         .contact-left,
-         .contact-right {
-           flex-basis: 100%;
-         }
-                 .services-list div i {
-                   font-size: 30px;
-                   margin-bottom: 20px;
-                 }
+  #portfolio {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .services-list div i {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1439px) {
@@ -615,13 +621,12 @@ nav .bar2 {
     max-width: 100%;
     margin: 0 25px;
   }
-    #portfolio {
-      max-width: 100%;
-      margin: 0 25px;
-    } 
-        .services-list div i {
-          font-size: 30px;
-          margin-bottom: 20px;
-        }
-    
+  #portfolio {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+  .services-list div i {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }

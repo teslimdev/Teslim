@@ -24,29 +24,38 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+
     <div id="home">
       <div id="header"></div>
       <div class="container">
         <div class="nav-head"></div>
-        <nav>
+
+        <nav id="navbar">
           <div class="nav-head nav-header">
-            <h1>
+            <h1 onclick="closeMenuOnClick()">
               <a href="#home">teslim<span>dev</span></a>
             </h1>
             <ul id="sidemenu">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio </a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#home" onclick="closeMenuOnClick()">Home</a></li>
+              <li><a href="#about" onclick="closeMenuOnClick()">About</a></li>
+              <li>
+                <a href="#services" onclick="closeMenuOnClick()">Services</a>
+              </li>
+              <li>
+                <a href="#portfolio" onclick="closeMenuOnClick()">Portfolio </a>
+              </li>
+              <li>
+                <a href="#contact" onclick="closeMenuOnClick()">Contact</a>
+              </li>
               <i
                 class="fa-sharp fa-solid fa-xmark bar"
-                onclick="closemenu()"
+                onclick="closeMenuOnClick()"
               ></i>
             </ul>
             <i class="fa-solid fa-bars bar2" onclick="openmenu()"></i>
           </div>
         </nav>
+
         <div class="header-text">
           <p>Frontend Developer</p>
           <h1>
@@ -72,13 +81,27 @@
               voluptatibus tenetur tempora mollitia dolorem!
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
+              <p
+                class="tab-links active-link"
+                onclick="opentab('skills')"
+                data-tabname="skills"
+              >
                 Skills
               </p>
-              <p class="tab-links" onclick="opentab('Experience')">
+              <p
+                class="tab-links"
+                onclick="opentab('Experience')"
+                data-tabname="experience"
+              >
                 Experience
               </p>
-              <p class="tab-links" onclick="opentab('Education')">Education</p>
+              <p
+                class="tab-links"
+                onclick="opentab('Education')"
+                data-tabname="education"
+              >
+                Education
+              </p>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
@@ -96,7 +119,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tab-contents" id="Experience">
+            <div class="tab-contents" id="experience">
               <ul>
                 <li>
                   <span>Frontend Development</span><br />
@@ -112,7 +135,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tab-contents" id="Education">
+            <div class="tab-contents" id="education">
               <ul>
                 <li>
                   <span>Frontend Development</span><br />
@@ -124,7 +147,7 @@
                 </li>
                 <li>
                   <span>Frontend Development</span><br />
-                  Designing web interface
+                  Designing web interf
                 </li>
               </ul>
             </div>
@@ -234,7 +257,11 @@
             >
           </div>
           <div class="contact-right">
-            <form action="" id="contactForm" onsubmit="SendMail(); return false;">
+            <form
+              action=""
+              id="contactForm"
+              onsubmit="SendMail(); return false;"
+            >
               <input
                 type="text"
                 name="user_name"
@@ -265,31 +292,5 @@
         <p>copyright &copy;Teslimdev, All Rights Reserved</p>
       </div>
     </div>
-
-    <script>
-      let tablinks = document.getElementsByClassName("tab-links");
-      let tabcontents = document.getElementsByClassName("tab-contents");
-      const opentab = (tabname) => {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      };
-    </script>
-    <script>
-      let sidemenu = document.getElementById("sidemenu");
-
-      function openmenu() {
-        sidemenu.style.right = "0";
-      }
-
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-      }
-    </script>
   </body>
 </html>

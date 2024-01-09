@@ -1,27 +1,4 @@
-// script.js
 
-// emailjs.init("oeczAqi6w0uttZPIh");
-
-// function sendEmail(event) {
-//   event.preventDefault();
-
-//   // Get the form element
-//   const form = document.getElementById("contactForm");
-
-//   // Send the form using EmailJS
-//   emailjs.sendForm("service_inlr4va", "template_7hcp4rl", form)
-//     .then(
-//       (result) => {
-//         console.log(result.text);
-//         alert("Email sent successfully");
-//         form.reset();
-//       },
-//       (error) => {
-//         console.log(error.text);
-//         alert("Failed to send email");
-//       }
-//     );
-// }
 const SendMail=()=>{
     let params ={
         user_name:document.getElementById('user_name').value,
@@ -31,4 +8,59 @@ const SendMail=()=>{
     emailjs.send('service_9b7ik8d','template_0inbgai', params).then(function(res){
         alert('successful' + res.status);
     })
-}
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    let sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+    window.closeMenuOnClick = closemenu; 
+    window.openmenu = openmenu; 
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+
+    const opentab = (tabname) => {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    };
+
+    // Assigning the opentab function to the onclick event of each tab link
+    for (tablink of tablinks) {
+        tablink.onclick = function (event) {
+            opentab(this.getAttribute("data-tabname"));
+        };
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.getElementById("navbar");
+    let navHeader = document.querySelector(".nav-header");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add("nav-scroll");
+            navHeader.classList.add("no-border");
+        } else {
+            navbar.classList.remove("nav-scroll");
+            navHeader.classList.remove("no-border");
+        }
+    });
+});
+
+
