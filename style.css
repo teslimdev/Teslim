@@ -99,6 +99,7 @@ nav ul li a:hover::after {
 .header-text {
   margin-top: 20%;
   font-size: 30px;
+  z-index: 1;
 }
 
 .header-text  h1 {
@@ -106,6 +107,7 @@ nav ul li a:hover::after {
   margin-top: 20px;
   position: relative;
   width: fit-content;
+  z-index: -1;
 }
  .header-text h1 span{
   position: absolute;
@@ -113,9 +115,10 @@ nav ul li a:hover::after {
   left: 0;
   height: 100%;
   width: 0;
-  background-color: goldenrod;
+  background-color: white;
   animation: text_reveal_box 1s ease;
   animation-delay: 1s;
+  z-index: 0;
 }
 
 .header-text h1.one{
@@ -442,7 +445,7 @@ nav .bar2 {
     width: 200px;
     height: 100vh;
     padding-top: 50px;
-    z-index: 2;
+    z-index: 3;
     transition: right 0.5s;
   }
 

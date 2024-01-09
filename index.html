@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <script src="/main.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      emailjs.init("oeczAqi6w0uttZPIh"); // Replace "user_your_user_id" with your actual User ID
-    </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teslim</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/160be03552.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init("oeczAqi6w0uttZPIh"); 
+  </script>
+</head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teslim</title>
-    <script
-      src="https://kit.fontawesome.com/160be03552.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
   <body>
-
     <div id="home">
       <div id="header"></div>
       <div class="container">
@@ -56,14 +46,14 @@
           </div>
         </nav>
 
-        <div class="header-text">
-          <p>Frontend Developer</p>
-          <h1 class="two">
-            Hi, I'm <strong>Teslim</strong>
-            <span></span>
-          </h1>
-          <h1 class="one two">From Nigeria</h1>
-        </div>
+  <div class="header-text">
+    <p>Frontend Developer</p>
+    <h1 class="two">
+      Hi, I'm <strong id="dynamicContent">Teslim</strong>
+      <span></span>
+    </h1>
+    <h1 class="one two">From Nigeria</h1>
+  </div>
       </div>
     </div>
 
@@ -293,5 +283,6 @@
         <p>copyright &copy;Teslimdev, All Rights Reserved</p>
       </div>
     </div>
+
   </body>
 </html>

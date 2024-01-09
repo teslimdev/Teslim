@@ -64,3 +64,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// main.js
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   var dynamicContent = document.getElementById('dynamicContent');
+
+//   var names = ['Abdullah', 'John', 'Jane', 'Doe']; // Add more names as needed
+
+//   var swiper = new Swiper('.swiper-container', {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     loop: true,
+//     autoplay: {
+//       delay: 3000,
+//     },
+//     on: {
+//       slideChange: function () {
+//         var currentIndex = swiper.activeIndex % names.length;
+//         dynamicContent.innerText = names[currentIndex];
+//       },
+//     },
+//   });
+// });
+
