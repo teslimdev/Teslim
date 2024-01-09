@@ -350,6 +350,10 @@ nav ul li a:hover::after {
   display: inline-block;
   transition: transform 0.5s;
 }
+.social-icons .social-icon a{
+  font-size: 30px;
+  margin-right: 0;
+}
 
 .social-icons a:hover {
   color: goldenrod;
@@ -418,7 +422,7 @@ nav .bar2 {
 
 .message-icon {
   font-size: 30px;
-  color: white;
+  color: goldenrod;
   cursor: pointer;
   position: relative;
   z-index: 1001;
@@ -426,7 +430,12 @@ nav .bar2 {
   background: transparent;
   display: inline-block;
   padding: 10px;
+  transition: transform 0.5s;
 
+}
+.message-icon:hover{
+  color: white;
+    transform: translateY(-5px);
 }
 
 .social-icons {
