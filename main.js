@@ -64,6 +64,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const messageIcon = document.getElementById('messageIcon');
+  const socialIcons = document.getElementById('socialIcons');
+
+  messageIcon.addEventListener('click', function (event) {
+    event.stopPropagation(); // Prevent the click event from reaching the document click listener
+    // Toggle the social icons visibility
+    socialIcons.style.display =
+      socialIcons.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  // Close the social icons when clicking outside
+  document.addEventListener('click', function () {
+    socialIcons.style.display = 'none';
+  });
+});
+
+
 // main.js
 
 // document.addEventListener('DOMContentLoaded', function () {
