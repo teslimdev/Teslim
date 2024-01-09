@@ -101,11 +101,27 @@ nav ul li a:hover::after {
   font-size: 30px;
 }
 
-.header-text h1 {
+.header-text  h1 {
   font-size: 60px;
   margin-top: 20px;
+  position: relative;
+  width: fit-content;
 }
-.header-text h1 span {
+ .header-text h1 span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: goldenrod;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 1s;
+}
+
+.header-text h1.one{
+  margin-top: 5px;
+}
+.header-text h1 strong {
   color: goldenrod;
 }
 #about {
@@ -129,6 +145,9 @@ nav ul li a:hover::after {
 }
 .about-col-2 {
   flex-basis: 60%;
+}
+.about-col-2 p{
+  margin:  0 10px 10px 0;
 }
 .subtitle {
   font-size: 60px;
@@ -628,5 +647,19 @@ nav .bar2 {
   .services-list div i {
     font-size: 30px;
     margin-bottom: 20px;
+  }
+}
+
+
+
+
+@keyframes text_reveal_box {
+  50%{
+    width: 100%;
+    left: 0;
+  }
+  100%{
+    width: 0;
+    left:100%  ;
   }
 }
