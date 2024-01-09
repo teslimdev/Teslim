@@ -8,6 +8,9 @@ body {
   background: #080808;
   color: #fff;
 }
+html{
+  scroll-behavior: smooth;
+}
 #header {
   background-image: url(/img/teslim2.JPG);
   background-size: cover;
@@ -22,10 +25,10 @@ body {
 .header-text {
   padding: 10px 10%;
 }
-#over {
+#home {
   position: relative;
 }
-#over .container {
+#home .container {
   top: 0;
   position: absolute;
   width: 100%;
@@ -49,10 +52,13 @@ nav {
   border-bottom: 1px solid white;
 }
 nav h1 {
-  font-size: 2.5rem;
-  color: goldenrod;
+  font-size: 2.5rem; 
   text-transform: capitalize;
   margin: 10px 0;
+}
+nav h1 a{
+ text-decoration: none;
+ color: goldenrod;
 }
 nav h1 span {
   color: white;
@@ -193,7 +199,7 @@ nav ul li a:hover::after {
 }
 .services-list div a {
   text-decoration: none;
-  color: white;
+  color: goldenrod;
   font-size: 12px;
   margin-top: 20px;
   display: inline-block;
