@@ -14,13 +14,13 @@ html {
 #header {
   background-image: url(/img/teslim2.JPG);
   background-size: cover;
-  background-position: center 20%;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  margin: 0;
+  display: flex;
   background-color: #080808;
-  opacity: 60%;
+  opacity: 50%;
 }
 #header.head{
   background-image: none;
@@ -57,7 +57,7 @@ nav {
   border-bottom: 1px solid white;
 }
 .nav-scroll {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), black);
+  background:  black;
 }
 .no-border {
   border-bottom: none;
@@ -434,12 +434,19 @@ form textarea {
   width: 100%;
   border: 0;
   outline: white;
-  background: white;
+  background: #222222;
   padding: 15px;
   margin: 15px 0;
-  color: black;
+  color: white;
   font-size: 18px;
   border-radius: 6px;
+}
+
+form textarea::placeholder{
+  color: white;
+}
+form input::placeholder{
+  color: white;
 }
 form input:valid {
   content: "good";
@@ -448,10 +455,10 @@ form input:valid {
   width: 100%;
   text-align: center;
   padding: 25px 0;
-  background: white;
+  background: #222222;
   font-weight: 300;
   margin-top: 20px;
-  color: black;
+  color: white;
 }
 nav .bar {
   display: none;
@@ -556,17 +563,15 @@ nav .bar2 {
       margin: 3px;
      
     }
+    #header{
+      background-position: center 0;
+    }
     nav h1 {
       font-size: 1.8rem;
       color: goldenrod;
       text-transform: capitalize;
       z-index: 3;
     }
-         /* nav .nav-head.nav-header {
-           border-bottom: none;
-           z-index: 2;
-           
-         } */
     nav .dropdown-content {
     position: static; 
     width: 100%;
@@ -584,7 +589,7 @@ nav .bar2 {
     }
   
     .header-text {
-      margin-top: 65%;
+      margin-top: 80%;
       font-size: 30px;
     }
   .subtitle {
