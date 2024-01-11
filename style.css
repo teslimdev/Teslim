@@ -110,6 +110,14 @@ nav .dropdown-content li a{
 nav ul li a:hover::after {
   width: 100%;
 }
+nav ul li a span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+nav ul li a span i {
+  font-size: 10px;
+}
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -524,6 +532,11 @@ nav .bar2 {
    padding: 0;
    
  }
+
+    nav ul li a span{
+      display: flex;
+      justify-content: space-between;
+    }
     
     nav ul li.drop {
       display: block;
