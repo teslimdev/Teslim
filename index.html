@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teslim</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <script src="https://kit.fontawesome.com/160be03552.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/style.css" />
-  <script src="/main.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    emailjs.init("oeczAqi6w0uttZPIh"); 
-  </script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teslim</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/160be03552.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init("oeczAqi6w0uttZPIh");
+    </script>
+  </head>
 
   <body>
     <div id="home">
       <div id="header"></div>
       <div class="container">
         <div class="nav-head"></div>
-
         <nav id="navbar">
           <div class="nav-head nav-header">
-            <h1 onclick="closeMenuOnClick()">
+            <h1 onclick="closeNavbar()">
               <a href="#home">teslim<span>dev</span></a>
             </h1>
             <ul id="sidemenu">
-              <li><a href="#home" onclick="closeMenuOnClick()">Home</a></li>
-              <li><a href="#about" onclick="closeMenuOnClick()">About</a></li>
-              <li>
-                <a href="#services" onclick="closeMenuOnClick()">Services</a>
+              <li><a href="#home" onclick="closeNavbar()">Home</a></li>
+              <li><a href="#about" onclick="closeNavbar()">About</a></li>
+              <li><a href="#services" onclick="closeNavbar()">Services</a></li>
+              <li class="dropdown">
+                <a href="#portfolio">
+                  <span
+                    >Portfolio
+                    <i class="fa-solid fa-caret-down" id="dropdownArrow"></i
+                  ></span>
+                </a>
+                <ul class="dropdown-content hidden" id="portfolioDropdown">
+                  <li class="drop"><a href="#">Projects</a></li>
+                </ul>
               </li>
-              <li>
-                <a href="#portfolio" onclick="closeMenuOnClick()">Portfolio </a>
-              </li>
-              <li>
-                <a href="#contact" onclick="closeMenuOnClick()">Contact</a>
-              </li>
+              <li class="con"><a href="#contact" onclick="closeNavbar()">Contact</a></li>
               <i
                 class="fa-sharp fa-solid fa-xmark bar"
-                onclick="closeMenuOnClick()"
+                onclick="closeNavbar()"
               ></i>
             </ul>
-            <i class="fa-solid fa-bars bar2" onclick="openmenu()"></i>
+            <i class="fa-solid fa-bars bar2" onclick="openNavbar()"></i>
           </div>
         </nav>
-
-  <div class="header-text">
-    <p>Frontend Developer</p>
-    <h1 class="two">
-      Hi, I'm <strong id="dynamicContent">Teslim</strong>
-      <span></span>
-    </h1>
-    <h1 class="one two">From Nigeria</h1>
-  </div>
+        <div class="header-text">
+          <p>Frontend Developer</p>
+          <h1 class="two">
+            Hi, I'm <strong id="dynamicContent">Teslim</strong>
+            <span></span>
+          </h1>
+          <h1 class="one two">From Nigeria</h1>
+        </div>
       </div>
     </div>
 
@@ -283,21 +294,84 @@
         <p>copyright &copy;Teslimdev, All Rights Reserved</p>
       </div>
     </div>
-  <<div class="popup-container">
-  <div class="message-icon" id="messageIcon"><i class="fa-solid fa-message"></i></i></div>
-  <div class="social-icons" id="socialIcons">
-    <div class="social-icon"><a href="https://www.linkedin.com/in/abdullah-teslim"><i class="fab fa-linkedin"></i></a></div>
-      <div class="social-icon"><a href="https://github.com/teslimdev"><i class="fa-brands fa-github"></i></a></div>
-    <div class="social-icon"><a href="https://www.instagram.com/teslimabdullah"><i class="fab fa-instagram"></i></a></div>
-      <div class="social-icon"><a href="https://wa.link/wfhtk2"><i class="fa-brands fa-square-whatsapp"></i></a></div>
-  <div class="social-icon"><a href="https://twitter.com/abdullah_teslim"><i class="fa-brands fa-x-twitter"></i></a></div>
-   
-  </div>
-</div>
+    <div class="popup-container">
+      <div class="message-icon" id="messageIcon">
+        <i class="fa-solid fa-message"></i>
+      </div>
+      <div class="social-icons" id="socialIcons">
+        <div class="social-icon">
+          <a href="https://www.linkedin.com/in/abdullah-teslim"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="social-icon">
+          <a href="https://github.com/teslimdev"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <div class="social-icon">
+          <a href="https://www.instagram.com/teslimabdullah"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+        <div class="social-icon">
+          <a href="https://wa.link/wfhtk2"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="social-icon">
+          <a href="https://twitter.com/abdullah_teslim"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownArrow = document.getElementById("dropdownArrow");
+    const dropdownContent = document.getElementById("portfolioDropdown");
+    const navbar = document.getElementById("sidemenu");
+    const contactList = document.querySelector('.con'); // Adjust the selector as needed
+
+    // Function to close the navbar and reset styles
+    function closeNavbar() {
+      navbar.style.right = "-200px";
+      dropdownContent.classList.add("hidden"); // Hide dropdown content
+
+      // Add event listener for transitionend
+      navbar.addEventListener("transitionend", function resetStyles() {
+        contactList.style.marginTop = "0"; // Reset the margin for the contact list
+        navbar.removeEventListener("transitionend", resetStyles); // Remove the event listener
+      }, { once: true });
+    }
+
+    // Event listener for the dropdown arrow
+    dropdownArrow.addEventListener("click", function (event) {
+      event.stopPropagation();
+      event.preventDefault();
+      dropdownContent.classList.toggle("hidden");
+    });
+
+    // Event listener for links in the navbar
+    const navbarLinks = document.querySelectorAll('#sidemenu a');
+    navbarLinks.forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        // Check if the clicked link is the portfolio link
+        const isPortfolioLink = link.href.endsWith("#portfolio");
+
+        if (!isPortfolioLink) {
+          closeNavbar(); // Call the closeNavbar function for non-portfolio links
+        }
+      });
+    });
+  });
 
 
 
 
 
+
+
+    </script>
+    <script src="main.js"></script>
   </body>
 </html>

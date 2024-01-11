@@ -11,19 +11,24 @@ const SendMail=()=>{
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    let sidemenu = document.getElementById("sidemenu");
+  let navbar = document.getElementById("sidemenu");
 
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
+  function openNavbar() {
+    navbar.style.right = "0";
+  }
 
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
+  function closeNavbar() {
+    navbar.style.right = "-200px";
+  }
 
-    window.closeMenuOnClick = closemenu; 
-    window.openmenu = openmenu; 
+  window.closeNavbar = closeNavbar;
+  window.openNavbar = openNavbar;
+
+  // ... (rest of your code)
 });
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let tablinks = document.getElementsByClassName("tab-links");
@@ -82,26 +87,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// main.js
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   var dynamicContent = document.getElementById('dynamicContent');
-
-//   var names = ['Abdullah', 'John', 'Jane', 'Doe']; // Add more names as needed
-
-//   var swiper = new Swiper('.swiper-container', {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     autoplay: {
-//       delay: 3000,
-//     },
-//     on: {
-//       slideChange: function () {
-//         var currentIndex = swiper.activeIndex % names.length;
-//         dynamicContent.innerText = names[currentIndex];
-//       },
-//     },
-//   });
-// });
 
