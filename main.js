@@ -86,6 +86,39 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownArrow = document.getElementById("dropdownArrow");
+    const dropdownContent = document.getElementById("portfolioDropdown");
+    const navbar = document.getElementById("sidemenu");
+    const contactList = document.querySelector('.con'); // Adjust the selector as needed
+
+    // Function to close the navbar and reset styles
+    function closeNavbar() {
+        navbar.style.right = "-200px";
+        dropdownContent.classList.add("hidden"); // Hide dropdown content
+        contactList.style.marginTop = "0"; // Reset the margin for the contact list
+    }
+
+    // Event listener for the dropdown arrow
+    dropdownArrow.addEventListener("click", function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        dropdownContent.classList.toggle("hidden");
+        if (dropdownContent.classList.contains("hidden")) {
+            contactList.style.marginTop = "0";
+        }
+    });
+
+    // Event listener for links in the navbar
+    const navbarLinks = document.querySelectorAll('#sidemenu a');
+    navbarLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            closeNavbar(); // Call the closeNavbar function when any link is clicked
+        });
+    });
+});
+
+
 
 
 

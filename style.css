@@ -22,6 +22,10 @@ html {
   background-color: #080808;
   opacity: 60%;
 }
+#header.head{
+  background-image: none;
+  min-height: 100px;
+}
 .header-text {
   padding: 10px 10%;
 }
@@ -295,11 +299,15 @@ nav ul li a span i {
   display: block;
   transition: transform 0.5s;
 }
+.work-list.works{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
 
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), white);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), black);
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -312,7 +320,7 @@ nav ul li a span i {
   padding: 0 40px;
   text-align: center;
   font-size: 14px;
-  color: #080808;
+  color: white;
   transition: height 0.5s;
 }
 
@@ -325,10 +333,15 @@ nav ul li a span i {
   color: white;
   font-size: 16px;
   margin-top: 20px;
-  background: #080808;
+  border: 1px solid white;
   padding: 10px;
   border-radius: 30px;
   text-align: center;
+    transition: 0.5s;
+}
+.layer a:hover{
+  background-color: white;
+  color: black;
 }
 .work:hover img {
   transform: scale(1.1);
@@ -549,11 +562,11 @@ nav .bar2 {
       text-transform: capitalize;
       z-index: 3;
     }
-         nav .nav-head.nav-header {
+         /* nav .nav-head.nav-header {
            border-bottom: none;
            z-index: 2;
            
-         }
+         } */
     nav .dropdown-content {
     position: static; 
     width: 100%;
@@ -584,7 +597,10 @@ nav .bar2 {
   .about-col-1 {
     margin-bottom: 20px;
   }
-
+    .work-list.works {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
   .about-col-1 img {
     width: 100%;
     height: 500px;
@@ -667,6 +683,10 @@ nav .bar2 {
     display: block;
     margin: 25px;
   }
+    .work-list.works {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   #header {
     background-repeat: no-repeat;
     background-attachment: fixed;
