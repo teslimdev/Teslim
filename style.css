@@ -13,8 +13,8 @@ html {
 }
 #header {
   background-image: url(/img/teslim2.JPG);
-  background-size: cover ;
-  background-position:center  top ;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
@@ -22,7 +22,7 @@ html {
   background-color: #080808;
   opacity: 50%;
 }
-#header.head{
+#header.head {
   background-image: none;
   min-height: 100px;
 }
@@ -43,7 +43,6 @@ nav {
   width: 100%;
   position: fixed;
   padding: 10px 0;
-  
 }
 .nav-head {
   display: flex;
@@ -57,7 +56,7 @@ nav {
   border-bottom: 1px solid white;
 }
 .nav-scroll {
-  background:  black;
+  background: black;
 }
 .no-border {
   border-bottom: none;
@@ -99,7 +98,6 @@ nav ul li a::after {
   transition: 0.5s;
 }
 
-
 nav .dropdown-content {
   position: absolute;
   top: 24px;
@@ -108,7 +106,7 @@ nav .dropdown-content {
   width: 150px;
   padding-top: 10px;
 }
-nav .dropdown-content li a{
+nav .dropdown-content li a {
   color: white;
 }
 nav ul li a:hover::after {
@@ -139,14 +137,14 @@ nav ul li a span i {
   z-index: 1;
 }
 
-.header-text  h1 {
+.header-text h1 {
   font-size: 60px;
   margin-top: 20px;
   position: relative;
   width: fit-content;
   z-index: -1;
 }
- .header-text h1 span{
+.header-text h1 span {
   position: absolute;
   top: 0;
   left: 0;
@@ -158,7 +156,7 @@ nav ul li a span i {
   z-index: 0;
 }
 
-.header-text h1.one{
+.header-text h1.one {
   margin-top: 5px;
 }
 .header-text h1 strong {
@@ -186,8 +184,8 @@ nav ul li a span i {
 .about-col-2 {
   flex-basis: 60%;
 }
-.about-col-2 p{
-  margin:  0 10px 10px 0;
+.about-col-2 p {
+  margin: 0 10px 10px 0;
 }
 .subtitle {
   font-size: 60px;
@@ -295,13 +293,14 @@ nav ul li a span i {
 }
 .work img {
   width: 100%;
+  height: 280px;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
 }
-.work-list.works{
+.work-list.works {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .layer {
@@ -337,9 +336,9 @@ nav ul li a span i {
   padding: 10px;
   border-radius: 30px;
   text-align: center;
-    transition: 0.5s;
+  transition: 0.5s;
 }
-.layer a:hover{
+.layer a:hover {
   background-color: white;
   color: black;
 }
@@ -396,7 +395,7 @@ nav ul li a span i {
   display: inline-block;
   transition: transform 0.5s;
 }
-.social-icons .social-icon a{
+.social-icons .social-icon a {
   font-size: 30px;
   margin-right: 0;
 }
@@ -440,34 +439,34 @@ form textarea {
   color: black;
   font-size: 18px;
   border-radius: 6px;
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
-form textarea::placeholder{
+form textarea::placeholder {
   color: white;
 }
- input::placeholder{
+input::placeholder {
   color: white;
 }
- input.name:focus{
+input.name:focus {
   background: white;
 }
- input.email:focus{
+input.email:focus {
   background: white;
 }
 input:focus::placeholder {
   color: black;
 }
-form textarea:focus{
+form textarea:focus {
   background: white;
 }
-form textarea:focus::placeholder{
-    color: black;
+form textarea:focus::placeholder {
+  color: black;
 }
 input.name:not(:focus) {
   color: white;
 }
-input.email:not(:focus){
+input.email:not(:focus) {
   color: white;
 }
 form textarea:not(:focus) {
@@ -506,11 +505,10 @@ nav .bar2 {
   display: inline-block;
   padding: 10px;
   transition: transform 0.5s;
-
 }
-.message-icon:hover{
+.message-icon:hover {
   color: white;
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .social-icons {
@@ -519,7 +517,7 @@ nav .bar2 {
   cursor: pointer;
   position: absolute;
   z-index: 1000;
- bottom: 60px;
+  bottom: 60px;
   left: 10px;
   margin: 0;
   display: none;
@@ -527,8 +525,80 @@ nav .bar2 {
   align-items: center;
   gap: 10px;
 }
+#showcase {
+  max-width: 1200px;
+  margin: auto;
+}
+.show-img {
+  display: flex;
+  justify-content: end;
+}
+.show-img img {
+  width: 1100px;
+  height: 600px;
+}
+.show-text h1 {
+  font-size: 30px;
+  padding: 20px 0;
+}
+.show-text p {
+  padding: 0 0 50px 20px;
+}
+#description{
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 0;
+}
+#description a{
+  text-decoration: none;
+ display: flex;
+ gap: 10px;
+ color: white;
+ font-size: 16px;
+}
 
+#description a:hover{
+  background: white;
+  color: black;
+}
+.describe{
+  display: flex;
+}
+.details {
+flex-basis: 35%;
 
+}
+.description{
+  flex-basis: 60%;
+}
+.details h2{
+    border-bottom: 1px solid goldenrod;
+    padding-bottom: 7px;
+    width: fit-content;
+}
+  
+
+.details ul{
+  list-style: none;
+  
+}
+.details ul li{
+ padding: 18px 0;
+ display: flex;
+ gap: 10px;
+}
+.details ul li span{
+  font-weight: 700;
+}
+.description h2{
+  border-bottom: 1px solid goldenrod;
+    padding-bottom: 7px;
+    width: fit-content;
+}
+.description-text p{
+  padding: 18px 0;
+  font-size: 15px;
+}
 
 @media only screen and (max-width: 600px) {
   .header-text {
@@ -557,63 +627,61 @@ nav .bar2 {
     cursor: pointer;
   }
 
-     nav ul{
-      background: black;
-      position: fixed;
-      right: -200px;
-      top: 0;
-      width: 200px;
-      height: 100%;
-      padding-top: 50px;
-      z-index: 1000;
-        transition: right 0.5s;
-     }
- nav ul li {
-   display: block;
-   margin: 30px 25px;
-   padding: 0;
-   
- }
+  nav ul {
+    background: black;
+    position: fixed;
+    right: -200px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    padding-top: 50px;
+    z-index: 1000;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 30px 25px;
+    padding: 0;
+  }
 
-    nav ul li a span{
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    nav ul li.drop {
-      display: block;
-      margin: 3px;
-     
-    }
-    #header{
-      background-position: center 0;
-    }
-    nav h1 {
-      font-size: 1.8rem;
-      color: goldenrod;
-      text-transform: capitalize;
-      z-index: 3;
-    }
-    nav .dropdown-content {
-    position: static; 
+  nav ul li a span {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul li.drop {
+    display: block;
+    margin: 3px;
+  }
+  #header {
+    background-position: center 0;
+  }
+  nav h1 {
+    font-size: 1.8rem;
+    color: goldenrod;
+    text-transform: capitalize;
+    z-index: 3;
+  }
+  nav .dropdown-content {
+    position: static;
     width: 100%;
     padding-top: 10px;
-    height: 0; 
-    overflow: hidden; 
+    height: 0;
+    overflow: hidden;
   }
 
   nav ul li:hover .dropdown-content {
-    height: auto; 
+    height: auto;
   }
-       
-    .nav-head {
-      margin: 0 20px;
-    }
-  
-    .header-text {
-      margin-top: 70%;
-      font-size: 30px;
-    }
+
+  .nav-head {
+    margin: 0 20px;
+  }
+
+  .header-text {
+    margin-top: 70%;
+    font-size: 30px;
+  }
   .subtitle {
     font-size: 30px;
   }
@@ -624,10 +692,11 @@ nav .bar2 {
   .about-col-1 {
     margin-bottom: 20px;
   }
-    .work-list.works {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
+  .work-list.works {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
   .about-col-1 img {
     width: 100%;
     height: 500px;
@@ -655,17 +724,17 @@ nav .bar2 {
     max-width: 100%;
     margin: 0 25px;
   }
-    .con {
-      /* Add this style to reset the margin when the dropdown is closed */
-      margin-top: 0;
-    }
-    .contact-left,
-    .contact-right {
-      flex-basis: 100%;
-  
-      /* Add this line to reset the margin when the dropdown is closed */
-    }
-   
+  .con {
+    /* Add this style to reset the margin when the dropdown is closed */
+    margin-top: 0;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+
+    /* Add this line to reset the margin when the dropdown is closed */
+  }
+
   .btn {
     margin: 30px auto;
     padding: 14px 30px;
@@ -674,6 +743,40 @@ nav .bar2 {
     font-size: 30px;
     margin-bottom: 20px;
   }
+  .show-img img {
+    width: 100%;
+    height: 100%;
+  }
+  #showcase {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+  .show-text h1 {
+    font-size: 30px;
+    padding: 20px 0;
+  }
+
+  .show-text p {
+    padding: 0 0 30px 0;
+  }
+    #description {
+      max-width: 100%;
+      padding: 60px 25px;
+     
+    }
+    .describe {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .details {
+      flex-basis: 100%;
+  
+    }
+  
+    .description {
+      flex-basis: 100%;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -710,10 +813,10 @@ nav .bar2 {
     display: block;
     margin: 25px;
   }
-    .work-list.works {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .work-list.works {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   #header {
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -721,11 +824,10 @@ nav .bar2 {
     background-color: #080808;
     opacity: 60%;
   }
-     nav ul li.drop {
-       display: block;
-       margin: 3px;
-  
-     }
+  nav ul li.drop {
+    display: block;
+    margin: 3px;
+  }
   nav h1 {
     font-size: 2rem;
     color: goldenrod;
@@ -787,6 +889,43 @@ nav .bar2 {
     font-size: 30px;
     margin-bottom: 20px;
   }
+    .show-img img {
+      width: 100%;
+      height: 100%;
+    }
+  
+    #showcase {
+      max-width: 100%;
+      margin: 0 25px;
+    }
+  
+    .show-text h1 {
+      font-size: 30px;
+      padding: 20px 0;
+    }
+  
+    .show-text p {
+      padding: 0 0 50px 0;
+    }
+         #description {
+           max-width: 100%;
+           padding: 60px 25px;
+    
+         }
+        .describe {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+    
+        .details {
+          flex-basis: 100%;
+    
+        }
+    
+        .description {
+          flex-basis: 100%;
+        }
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1439px) {
@@ -819,18 +958,33 @@ nav .bar2 {
     font-size: 30px;
     margin-bottom: 20px;
   }
+        .show-img img {
+          width: 100%;
+          height: 100%;
+        }
+    
+        #showcase {
+          max-width: 900px;
+          margin: auto;
+        }
+    
+        .show-text h1 {
+          font-size: 30px;
+          padding: 20px 0;
+        }
+    
+        .show-text p {
+          padding: 0 0 50px 20px;
+        }
 }
 
-
-
-
 @keyframes text_reveal_box {
-  50%{
+  50% {
     width: 100%;
     left: 0;
   }
-  100%{
+  100% {
     width: 0;
-    left:100%  ;
+    left: 100%;
   }
 }
