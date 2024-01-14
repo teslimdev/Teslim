@@ -170,6 +170,8 @@ nav ul li a span i {
   width: 400px;
   height: 500px;
   border-radius: 15px;
+  object-fit: cover;
+  object-position: center 0;
 }
 .row {
   display: flex;
@@ -186,6 +188,7 @@ nav ul li a span i {
 }
 .about-col-2 p {
   margin: 0 10px 10px 0;
+  line-height: 30px;
 }
 .subtitle {
   font-size: 60px;
@@ -194,7 +197,7 @@ nav ul li a span i {
 }
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 20px 0 20px;
 }
 .tab-links {
   margin-right: 50px;
@@ -221,11 +224,25 @@ nav ul li a span i {
   list-style: none;
   margin: 10px 0;
 }
-.tab-contents ul li span {
-  color: goldenrod;
-  font-size: 14px;
+#experience.tab-contents ul li{
+  font-size: 16px;
+  
+  padding: 8px 0;
 }
+#education.tab-contents ul li {
+  font-size: 16px;
 
+  padding: 10px 0;
+}
+.tab-contents ul li  {
+  padding: 1px 0;
+  font-size: 18px;
+ 
+ 
+}
+.tab-contents ul li p{
+  line-height: 20px;
+}
 .tab-contents {
   display: none;
 }
@@ -244,10 +261,12 @@ nav ul li a span i {
   grid-gap: 40px;
   margin-top: 50px;
 }
+
 .services-list div {
   background: #222222;
   padding: 40px;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 300;
   border-radius: 10px;
   transition: background 0.5s, transform 0.5s;
