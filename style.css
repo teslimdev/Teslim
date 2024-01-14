@@ -141,21 +141,23 @@ nav ul li a span i {
   font-size: 60px;
   margin-top: 20px;
   position: relative;
-  width: fit-content;
+  width: 100%;
   z-index: -1;
+  
 }
 .header-text h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 0;
-  background-color: white;
-  animation: text_reveal_box 1s ease;
-  animation-delay: 1s;
-  z-index: 0;
-}
 
+ 
+}
+.header-text h1 span.reveal-text {
+  vertical-align: baseline;
+  /* Change to baseline */
+  width: 0;
+  animation: revealAnimation 1s ease;
+  display: inline;
+}
 .header-text h1.one {
   margin-top: 5px;
 }
@@ -272,13 +274,18 @@ nav ul li a span i {
   transition: background 0.5s, transform 0.5s;
 }
 .services-list div i {
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 30px;
 }
+ .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
 .services-list div h2 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   margin-bottom: 15px;
+  line-height: 35px;
 }
 .services-list div a {
   text-decoration: none;
@@ -815,6 +822,9 @@ transition: 0.5s;
   .description {
     flex-basis: 100%;
   }
+    .header-text h1 span.reveal-text{
+      left: 100px;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -1020,13 +1030,12 @@ transition: 0.5s;
   }
 }
 
-@keyframes text_reveal_box {
-  50% {
-    width: 100%;
-    left: 0;
+
+@keyframes revealAnimation {
+  0% {
+    width: 0;
   }
   100% {
-    width: 0;
-    left: 100%;
+    width: 100%;
   }
 }

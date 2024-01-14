@@ -86,39 +86,61 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const dropdownArrow = document.getElementById("dropdownArrow");
-//     const dropdownContent = document.getElementById("portfolioDropdown");
-//     const navbar = document.getElementById("sidemenu");
-//     const contactList = document.querySelector('.con'); // Adjust the selector as needed
+// script.js
 
-//     // Function to close the navbar and reset styles
-//     function closeNavbar() {
-//         navbar.style.right = "-200px";
-//         dropdownContent.classList.add("hidden"); // Hide dropdown content
-//         contactList.style.marginTop = "0"; // Reset the margin for the contact list
-//     }
+// script.js
 
-//     // Event listener for the dropdown arrow
-//     dropdownArrow.addEventListener("click", function (event) {
-//         event.stopPropagation();
-//         event.preventDefault();
-//         dropdownContent.classList.toggle("hidden");
-//         if (dropdownContent.classList.contains("hidden")) {
-//             contactList.style.marginTop = "0";
-//         }
-//     });
+document.addEventListener('DOMContentLoaded', function () {
+  const messageIcon = document.getElementById('messageIcon');
+  const socialIcons = document.getElementById('socialIcons');
 
-//     // Event listener for links in the navbar
-//     const navbarLinks = document.querySelectorAll('#sidemenu a');
-//     navbarLinks.forEach(function (link) {
-//         link.addEventListener("click", function () {
-//             closeNavbar(); // Call the closeNavbar function when any link is clicked
-//         });
-//     });
-// });
+  messageIcon.addEventListener('click', function (event) {
+    event.stopPropagation();
+    socialIcons.style.display =
+      socialIcons.style.display === 'flex' ? 'none' : 'flex';
+  });
 
+  document.addEventListener('click', function () {
+    socialIcons.style.display = 'none';
+  });
 
+  var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    effect: 'fade',
+  });
 
+  function updateDynamicContent(newName) {
+    var dynamicContentElement = document.getElementById('dynamicContent');
+    dynamicContentElement.innerHTML = ''; // Clear existing content
 
+    // Create a span for each letter and add it to the element
+    for (let i = 0; i < newName.length; i++) {
+      var letterSpan = document.createElement('span');
+      letterSpan.className = 'reveal-text';
+      letterSpan.textContent = newName[i];
+      dynamicContentElement.appendChild(letterSpan);
 
+      // Apply reveal animation with a delay based on the index
+      setTimeout(function () {
+        letterSpan.style.width = '100%';
+      }, 100 * (i + 1));
+    }
+  }
+
+  var names = ['Abdullah', 'Teslim', 'Ariyo'];
+  var currentIndex = 0;
+
+  function changeContent() {
+    updateDynamicContent(names[currentIndex]);
+    currentIndex = (currentIndex + 1) % names.length;
+  }
+
+  changeContent();
+
+  setInterval(function () {
+    changeContent();
+  }, 5000);
+});
