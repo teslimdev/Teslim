@@ -88,59 +88,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // script.js
 
-// script.js
+// function updateDynamicContent(newName) {
+//   var dynamicContentElement = document.getElementById('dynamicContent');
+//   dynamicContentElement.innerHTML = ''; // Clear existing content
 
-document.addEventListener('DOMContentLoaded', function () {
-  const messageIcon = document.getElementById('messageIcon');
-  const socialIcons = document.getElementById('socialIcons');
+//   for (let i = 0; i < newName.length; i++) {
+//     // Create a span for each letter and add it to the element
+//     var letterSpan = document.createElement('span');
+//     letterSpan.textContent = newName[i];
+//     letterSpan.style.opacity = '';
+//     dynamicContentElement.appendChild(letterSpan);
 
-  messageIcon.addEventListener('click', function (event) {
-    event.stopPropagation();
-    socialIcons.style.display =
-      socialIcons.style.display === 'flex' ? 'none' : 'flex';
-  });
+//     // Apply reveal animation with a delay based on the index
+//     setTimeout(function () {
+//       letterSpan.style.opacity = '1';
+//     }, (i + 1) * 100); // Adjust the delay as needed
+//   }
+// }
 
-  document.addEventListener('click', function () {
-    socialIcons.style.display = 'none';
-  });
+// var names = ['Abdullah', 'Teslim', 'Ariyo'];
+// var currentIndex = 0;
 
-  var mySwiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-      delay: 2000,
-    },
-    effect: 'fade',
-  });
+// function changeContent() {
+//   updateDynamicContent(names[currentIndex]);
+//   currentIndex = (currentIndex + 1) % names.length;
+// }
 
-  function updateDynamicContent(newName) {
-    var dynamicContentElement = document.getElementById('dynamicContent');
-    dynamicContentElement.innerHTML = ''; // Clear existing content
+// changeContent();
 
-    // Create a span for each letter and add it to the element
-    for (let i = 0; i < newName.length; i++) {
-      var letterSpan = document.createElement('span');
-      letterSpan.className = 'reveal-text';
-      letterSpan.textContent = newName[i];
-      dynamicContentElement.appendChild(letterSpan);
-
-      // Apply reveal animation with a delay based on the index
-      setTimeout(function () {
-        letterSpan.style.width = '100%';
-      }, 100 * (i + 1));
-    }
-  }
-
-  var names = ['Abdullah', 'Teslim', 'Ariyo'];
-  var currentIndex = 0;
-
-  function changeContent() {
-    updateDynamicContent(names[currentIndex]);
-    currentIndex = (currentIndex + 1) % names.length;
-  }
-
-  changeContent();
-
-  setInterval(function () {
-    changeContent();
-  }, 5000);
-});
+// setInterval(function () {
+//   changeContent();
+// }, 5000);

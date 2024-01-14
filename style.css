@@ -141,29 +141,32 @@ nav ul li a span i {
   font-size: 60px;
   margin-top: 20px;
   position: relative;
-  width: 100%;
+  width: fit-content;
   z-index: -1;
-  
 }
+
 .header-text h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 0;
+  background-color: white;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 1s;
+  z-index: 0;
+}
 
- 
-}
-.header-text h1 span.reveal-text {
-  vertical-align: baseline;
-  /* Change to baseline */
-  width: 0;
-  animation: revealAnimation 1s ease;
-  display: inline;
-}
 .header-text h1.one {
   margin-top: 5px;
 }
+
 .header-text h1 strong {
   color: goldenrod;
 }
+
+
+
 #about {
   padding: 50px 0;
   color: white;
@@ -1029,13 +1032,21 @@ transition: 0.5s;
     padding: 60px 25px;
   }
 }
+@keyframes text_reveal_box {
+  0% {
+    width: 0;
+  }
 
+  100% {
+    width: 100%;
+  }
+}
 
-@keyframes revealAnimation {
+/* @keyframes revealAnimation {
   0% {
     width: 0;
   }
   100% {
     width: 100%;
   }
-}
+} */
