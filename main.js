@@ -88,34 +88,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // script.js
 
-// function updateDynamicContent(newName) {
-//   var dynamicContentElement = document.getElementById('dynamicContent');
-//   dynamicContentElement.innerHTML = ''; // Clear existing content
 
-//   for (let i = 0; i < newName.length; i++) {
-//     // Create a span for each letter and add it to the element
-//     var letterSpan = document.createElement('span');
-//     letterSpan.textContent = newName[i];
-//     letterSpan.style.opacity = '';
-//     dynamicContentElement.appendChild(letterSpan);
 
-//     // Apply reveal animation with a delay based on the index
-//     setTimeout(function () {
-//       letterSpan.style.opacity = '1';
-//     }, (i + 1) * 100); // Adjust the delay as needed
-//   }
-// }
 
-// var names = ['Abdullah', 'Teslim', 'Ariyo'];
-// var currentIndex = 0;
 
-// function changeContent() {
-//   updateDynamicContent(names[currentIndex]);
-//   currentIndex = (currentIndex + 1) % names.length;
-// }
 
-// changeContent();
 
-// setInterval(function () {
-//   changeContent();
-// }, 5000);
+
+
+
+
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  var mySwiper = new Swiper('.swiper-container', {
+    // Add your Swiper configuration here
+    // For example:
+    loop: true,
+    autoplay: {
+      delay: 3000, // Change slide every 3 seconds
+    },
+  });
+
+  // Change the name dynamically
+  var names = ['Teslim', 'Abdullah', 'Ariyo']; // Add more names as needed
+  var dynamicContent = document.getElementById('dynamicContent');
+  var currentIndex = 0;
+
+  setInterval(function () {
+    currentIndex = (currentIndex + 1) % names.length;
+    dynamicContent.textContent = names[currentIndex];
+  }, 3000); // Change the name every 3 seconds (adjust as needed)
+});
+
