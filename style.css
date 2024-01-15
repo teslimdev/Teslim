@@ -164,6 +164,10 @@ nav ul li a span i {
 .header-text h1 strong {
   color: goldenrod;
 }
+.animate__animated.animate__tada {
+  --animate-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
 
 

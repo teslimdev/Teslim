@@ -25,6 +25,9 @@
       
       <!-- Latest Swiper JS -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="icon" href="/img/teslim2.JPG" type="image/jpg">
   </head>
 
@@ -56,7 +59,7 @@
             <i class="fa-solid fa-bars bar2" onclick="openNavbar()"></i>
           </div>
         </nav>
-<div class="header-text">
+<div class="header-text " >
   <p>Frontend Developer</p>
   <h1 class="two">
     Hi, I'm <strong id="dynamicContent">Teslim</strong>
@@ -71,10 +74,10 @@
     <div id="about">
       <div class="container">
         <div class="row">
-          <div class="about-col-1">
+          <div class="about-col-1" data-aos="fade-right">
             <img src="/img/teslim1.JPG" alt="" />
           </div>
-          <div class="about-col-2">
+          <div class="about-col-2" data-aos="fade-up">
             <h1 class="subtitle">About Me</h1>
             <p>
               I'm a dedicated Software developer having an expertise of web applications with Html, CSS, React.js, Tailwind CSS and
@@ -163,9 +166,9 @@
 
     <div id="services">
       <div class="container">
-        <h1 class="subtitle">My Services</h1>
+        <h1 class="subtitle"  data-aos="fade-right">My Services</h1>
         <div class="services-list">
-          <div>
+          <div data-aos="fade-up">
             <i class="fa-solid fa-code"></i>
             <h2>Software Engineer</h2>
             <p>
@@ -174,7 +177,7 @@
             </p>
    
           </div>
-          <div>
+          <div data-aos="fade-up">
             <i class="fa-solid fa-crop"></i>
             <h2>Frontend Developer</h2>
             <p>
@@ -184,7 +187,7 @@
             </p>
          
           </div>
-          <div>
+          <div data-aos="fade-up">
             <i class="fa-brands fa-app-store"></i>
             <h2>Web developer</h2>
             <p>
@@ -200,9 +203,9 @@
 
     <div id="portfolio">
       <div class="container">
-        <h1 class="subtitle">My Work</h1>
+        <h1 class="subtitle" data-aos="fade-right">My Work</h1>
         <div class="work-list">
-          <div class="work">
+          <div class="work" data-aos="fade-up">
             <img src="/img/screen.png" alt="" />
             <div class="layer">
               <h3>Apical Designs</h3>
@@ -213,7 +216,7 @@
               <a href="/preview.html">learn more</a>
             </div>
           </div>
-          <div class="work">
+          <div class="work" data-aos="fade-up">
             <img src="/img/screen2.png" alt="" />
           <div class="layer">
             <h3>Apical Designs</h3>
@@ -224,7 +227,7 @@
             <a href="/preview.html">learn more</a>
           </div>
           </div>
-          <div class="work">
+          <div class="work" data-aos="fade-up">
             <img src="/img/screen.png" alt="" />
           <div class="layer">
             <h3>Apical Designs</h3>
@@ -236,7 +239,7 @@
           </div>
           </div>
         </div>
-        <a href="/project.html" class="btn">see more</a>
+        <a href="/project.html" data-aos="fade-up-right" class="btn">see more</a>
       </div>
     </div>
 
@@ -244,16 +247,16 @@
       <div class="container">
         <div class="row">
           <div class="contact-left">
-            <h1 class="subtitle">Contact Me</h1>
-            <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
-            <p><i class="fa-solid fa-phone-volume"></i> 08184370911</p>
-            <div class="social-icons">
+            <h1 class="subtitle" data-aos="fade-right">Contact Me</h1>
+            <p  data-aos="fade-up"><i class="fa-solid fa-paper-plane" ></i> Teslimabdullah2@gmail.com</p>
+            <p  data-aos="fade-up"><i class="fa-solid fa-phone-volume"  ></i> 08184370911</p>
+            <!-- <div class="social-icons">
               <a href="   "><i class="fa-brands fa-linkedin"></i></a>
               <a href="   "><i class="fa-brands fa-x-twitter"></i></a>
               <a href="   "><i class="fa-brands fa-instagram"></i></a>
               <a href="   "><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-            <a href="/img/Teslim Abdullah.docx" download class="btn btn2"
+            </div> -->
+            <a href="/img/Teslim Abdullah.docx"  data-aos="fade-up" download class="btn btn2"
               >Download CV</a
             >
           </div>
@@ -262,6 +265,7 @@
               action=""
               id="contactForm"
               onsubmit="SendMail(); return false;"
+              
             >
               <input
               class="name"
@@ -270,6 +274,7 @@
                 id="user_name"
                 placeholder="input name"
                 required
+                 data-aos="fade-up"
               />
               <input
               class="email"
@@ -278,27 +283,29 @@
                 id="user_email"
                 placeholder="input email"
                 required
+                 data-aos="fade-up"
               />
               <textarea
                 name="message"
                 required
+                 data-aos="fade-up"
                 rows="6"
                
                 id="message"
                 placeholder="your message"
               ></textarea>
-              <button type="submit" class="btn btn3">submit</button>
+              <button type="submit"  data-aos="fade-up" class="btn btn3">submit</button>
             </form>
           </div>
         </div>
       </div>
-      <div class="copyright">
+      <div class="copyright"  >
         <p>copyright &copy;Teslimdev, All Rights Reserved</p>
       </div>
     </div>
-    <div class="popup-container">
+    <div class="popup-container"  >
       <div class="message-icon" id="messageIcon">
-        <i class="fa-solid fa-message"></i>
+        <i class="fa-solid fa-message   animate__animated animate__tada"></i>
       </div>
       <div class="social-icons" id="socialIcons">
         <div class="social-icon">

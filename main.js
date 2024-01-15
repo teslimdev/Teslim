@@ -122,3 +122,4 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 3000); // Change the name every 3 seconds (adjust as needed)
 });
 
+ AOS.init();
