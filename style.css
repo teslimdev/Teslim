@@ -628,7 +628,8 @@ nav .bar2 {
 }
 .description-text p {
   padding: 18px 0;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 30px;
 }
 .button{
   display: flex;
@@ -832,6 +833,11 @@ transition: 0.5s;
     .header-text h1 span.reveal-text{
       left: 100px;
     }
+        .description-text p {
+          padding: 18px 0;
+          font-size: 15px;
+          line-height: 30px;
+        }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
