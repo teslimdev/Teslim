@@ -1,6 +1,7 @@
 
-const SendMail = () => {
-   e.preventDefault();
+const SendMail = (e) => {
+    e.preventDefault();
+
     let params = {
         user_name: document.getElementById('user_name').value,
         user_email: document.getElementById('user_email').value,
@@ -29,6 +30,7 @@ const SendMail = () => {
             }
         );
 };
+
 
 
 
