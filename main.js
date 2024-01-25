@@ -1,14 +1,36 @@
 
-const SendMail=()=>{
-    let params ={
-        user_name:document.getElementById('user_name').value,
-        user_email:document.getElementById('user_email').value,
-        message:document.getElementById('message').value
-    }
-    emailjs.send('service_9b7ik8d','template_0inbgai', params).then(function(res){
-        alert('successful' + res.status);
-    })
+const SendMail = () => {
+   e.preventDefault();
+    let params = {
+        user_name: document.getElementById('user_name').value,
+        user_email: document.getElementById('user_email').value,
+        message: document.getElementById('message').value
+    };
+
+    emailjs.send('service_9b7ik8d', 'template_0inbgai', params)
+        .then(
+            function (response) {
+                // On success
+                // Show sent message
+                document.getElementById('contact-message').textContent = "Message sent successfully ✅";
+                // Remove message after it is sent
+                setTimeout(() => {
+                    document.getElementById('contact-message').textContent = "";
+                }, 5000);
+                // Clear input fields of the form
+                setTimeout(() => {
+                    document.getElementById('contactForm').reset();
+                }, 3000);
+            },
+            function (error) {
+                // On failure
+                // Show error message
+                document.getElementById('contact-message').textContent = "Message not sent (service error) ❌";
+            }
+        );
 };
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   let navbar = document.getElementById("sidemenu");
